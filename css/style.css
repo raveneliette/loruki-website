@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles  */
+body {
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+code, 
+pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar .container {
+    animation: slideInFromTop 1s ease-in;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* Showcase */
+.showcase {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 400px;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 42%;
+    gap: 30px;
+    overflow: visible; /* make to\he card visible to its parent container */
+}
+
+.showcase-text {
+    animation: slideInFromLeft 0.6s ease-in;
+}
+
+.showcase-form {
+    animation: slideInFromRight 0.8s ease-in;
+    height: 350px;
+    justify-self: flex-end;
+    padding: 40px;
+    position: relative;
+    top: 60px;
+    width: 400px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    font-size: 16px;
+    padding: 3px;
+    width: 100%;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before, 
+.showcase::after {
+    content: '';
+    height: 100px;
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/* Stats */
+.stats {
+    animation: slideInFromBottom 0.3s ease-in;
+    padding-top: 100px;
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Cli */
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex {
+    flex-wrap: wrap;
+}
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in; /* Smoother effect */
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px); /* it moves upward when the value is negative */
+}
+
+/* Features */
+.features-head img, 
+.docs-head img {
+    justify-self: flex-end;
+    width: 200px;
+}
+
+.features-sub-head img {
+    justify-self: flex-end;
+    width: 300px;
+}
+
+.features-main .card > i {
+    margin-right: 20px;
+}
+
+.features-main .grid {
+    padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+/* Docs */
+.docs-main h3 {
+    margin: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main .links-card {
+    padding: 2rem;
+}
+
+.docs-main nav li {
+    border-bottom: 1px #ccc solid;
+    font-size: 17px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.docs-main a:hover {
+    font-weight: bold;
+}
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* coming from the left */
+    }
+
+    100% {
+        transform: translateX(0); /* end up in zero just its normal position */
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* coming from the right */
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%); /* start up above off screen */
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%); /* start up above off screen */
+    }
+
+    100% {
+        transform: translateX(0); /* end up in zero just its normal position */
+    }
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .navbar .container {
+        animation: slideInFromTop 1.5s ease-in;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        animation: slideInFromTop 0.5s ease-in;
+        margin-top: 40px;
+        text-align: center; 
+    }
+
+    .showcase-form {
+        animation: slideInFromBottom 1.2s ease-in;
+        justify-self: center;
+        margin: auto;
+    }
+
+    .cli .grid > *:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head {
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img {
+        justify-self: center;
+    }
+
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2) {
+        grid-column: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .showcase-form {
+        width: 300px;
+    }
+}

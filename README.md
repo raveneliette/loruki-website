@@ -1,4 +1,4 @@
-# Loruki Website Cloud hosting website
+# Loruki Website Cloud Hosting Website
 
 ## Overview
 

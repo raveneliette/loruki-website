@@ -8,7 +8,7 @@
 
 ## My process
 
-I've got this website structure tutorial video from Youtube Channel Traversy Media. I changed some of the CSS styles with my styles.
+I've got this website structure tutorial video from Youtube Channel Traversy Media as a learning practice. I changed some little of the CSS styles with my styles.
 
 ### Built with
 
